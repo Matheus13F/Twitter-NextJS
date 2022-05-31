@@ -53,9 +53,13 @@ git clone git@github.com:matheus13f/Twitter-NextJS.git
 
 You need to install the dependencies of the project, so **run the above command on root folder**:
 
-```yarn```
+```sh
+yarn
+```
 or
-```npm i```
+```sh
+npm i
+```
 
 # :runner: Getting Started
 
