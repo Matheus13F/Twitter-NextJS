@@ -39,11 +39,15 @@ This project has a UI Documentation of reusable components, allowing to test the
 
 **You need to install [NPM](https://www.npmjs.com/) and [YARN](https://yarnpkg.com/) first, then in order to clone the project via HTTPS, run this command:**
 
-```git clone https://github.com/matheus13f/Twitter-NextJS.git```
+```sh
+git clone https://github.com/matheus13f/Twitter-NextJS.git
+```
 
 SSH URLs provide access to a Git repository via SSH, a secure protocol. If you have a SSH key registered in your Github account, clone the project using this command:
 
-```git clone git@github.com:matheus13f/Twitter-NextJS.git```
+```sh
+git clone git@github.com:matheus13f/Twitter-NextJS.git
+```
 
 **Install dependencies**
 
@@ -57,9 +61,20 @@ or
 
 Run the following command to start the application in a development environment:
 
-```yarn dev```
+`cd` into the directory.
+
+```sh
+cd twitter-nextjs
+```
+Run the following command
+
+```sh
+yarn dev
+```
 or
-```npm dev```
+```sh 
+npm dev 
+```
 
 ```Happy code \{^-^}/```
 
