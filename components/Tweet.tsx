@@ -60,7 +60,7 @@ export function Tweet({ tweet }: IProps) {
                 <div>
                     <div className="flex items-center space-x-1">
                         <p className="mr-1 font-bold">{tweet.username}</p>
-                        <p className="hidden text-sm text-gray-500 sm:inline">@{tweet.username} •</p>
+                        <p className="hidden text-sm text-gray-500 sm:inline">@{tweet.username.replace(/\s+/g, '').toLocaleLowerCase()} •</p>
 
                         <TimeAgo
                             date={tweet._createdAt} 
@@ -99,8 +99,8 @@ export function Tweet({ tweet }: IProps) {
 
             {commentBoxVisible && (
                 <form onSubmit={handleSubmit} className="mt-3 flex space-x-3">
-                    <input value={input} onChange={e => setInput(e.target.value)} className="flex-1 rounded-lg bg-gray-100 p-2 outline-none" placeholder="whire a comment..."/>
-                    <button type="submit" disabled={!input} className="text-twitter disabled:text-gray-200">post</button>
+                    <input value={input} onChange={e => setInput(e.target.value)} className="flex-1 rounded-lg bg-gray-100 p-2 outline-none" placeholder="Write a comment..."/>
+                    <button type="submit" disabled={!input} className="text-twitter disabled:text-gray-200">Post</button>
                 </form>
             )}
 
@@ -113,7 +113,7 @@ export function Tweet({ tweet }: IProps) {
                            <div>
                                 <div className="flex items-center space-x-1">
                                     <p className="mr-1 font-bold">{comment.username}</p>
-                                    <p className="hidden text-sm text-gray-500 lg:inline">@{comment.username} • </p>
+                                    <p className="hidden text-sm text-gray-500 lg:inline">@{comment.username.replace(/\s+/g, '').toLocaleLowerCase()} • </p>
                                     <TimeAgo
                                         date={comment._createdAt}
                                         className="text-sm text-gray-500"
