@@ -3,7 +3,7 @@ import React, { SVGProps } from 'react';
 interface IProps {
     Icon: (props: SVGProps<SVGSVGElement>) => JSX.Element,
     title: string;
-    onClick?: () => {}
+    onClick?: () => void;
 }
 
 export function SidebarRow({Icon, title, onClick}: IProps) {

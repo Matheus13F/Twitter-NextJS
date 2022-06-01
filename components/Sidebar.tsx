@@ -10,7 +10,6 @@ import {
     MailIcon,
     UserIcon,
     HomeIcon,
-    GiftIcon
 } from '@heroicons/react/outline';
 
 import { AiOutlineLinkedin, AiOutlineGithub } from 'react-icons/ai';
@@ -20,11 +19,15 @@ import { SidebarRow } from './SidebarRow';
 export function Sidebar() {
     const { data: session } = useSession();
 
+    const handleReload = () => {
+        window.location.reload()
+    }
+
     return (
         <div className='col-span-2 flex flex-col items-center px-4 md:items-start justify-between max-h-screen'>
            <div>
                 <img className='m-3 h-10 w-10' src="https://links.papareact.com/drq" alt="logo twitter" />
-                <SidebarRow Icon={HomeIcon} title="Home" />
+                <SidebarRow Icon={HomeIcon} title="Home" onClick={handleReload}/>
                 <SidebarRow Icon={HashtagIcon} title="Explore" />
                 <SidebarRow Icon={BellIcon} title="Notifications" />
                 <SidebarRow Icon={MailIcon} title="Messages" />
